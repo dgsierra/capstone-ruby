@@ -25,10 +25,3 @@ class Item
     @archived = true
   end
 end
-
-test1 = Item.new('test', 'gender', 'author', 'source', 'label', '2001-1-1')
-
-p test1.id
-p test1.published_date.year
-p test1.can_be_archived?
-p test1.move_to_archive
