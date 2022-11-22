@@ -9,6 +9,8 @@ class Gener
   end
 
   def add_item(item)
+    return if @items.include?(item)
+
     @items.push(item)
   end
 end

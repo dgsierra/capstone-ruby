@@ -22,11 +22,6 @@ class Game < Item
       false
     else
       @last_played_at = Date.parse(date)
-      p @last_played_at
     end
   end
 end
-
-new_game = Game.new('test5', 'gender5', 'author5', 'source5', 'label5', '2010-1-5', '2020-11-20')
-
-p new_game.can_be_archived?
