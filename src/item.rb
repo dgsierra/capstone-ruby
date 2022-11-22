@@ -19,15 +19,15 @@ class Item
   def move_to_archive()
     if can_be_archived?()
       @archived = true
+      p @archived
     end
-    p @archived
   end
 
 end
 
 test1 = Item.new("test",'gender','author','source','label','2001-1-1')
 
-p test1.id
-p test1.publis_date.year
-p test1.can_be_archived?
-p test1.move_to_archive
+# p test1.id
+# p test1.publis_date.year
+# p test1.can_be_archived?
+# p test1.move_to_archive
