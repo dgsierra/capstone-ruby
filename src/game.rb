@@ -13,7 +13,7 @@ class Game < Item
     if validate_last_played_at(@last_played_at)
       super && (last_played_at < (Date.today - (365 * 2)))
     else
-      'put a valid date'
+      nil
     end
   end
 
