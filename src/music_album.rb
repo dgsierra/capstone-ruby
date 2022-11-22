@@ -14,6 +14,6 @@ class MusicAlbum < Item
   end
 end
 
-music = MusicAlbum.new("test3",'gender3','author3','source3','label3','2020-1-3', true)
+# music = MusicAlbum.new("test3",'gender3','author3','source3','label3','2020-1-3', true)
 
-p music.can_be_archived?
+# p music.can_be_archived?
