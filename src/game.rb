@@ -1,0 +1,34 @@
+require_relative 'item'
+
+class Game < Item
+  attr_reader :last_played_at
+  def initialize(name, gender, author, source, label, published_date, last_played_at = nil)
+    super(name, gender, author, source, label, published_date)
+    @last_played_at = last_played_at
+  end
+  def can_be_archived?()
+    if validate_last_played_at(@last_played_at)
+      if super and last_played_at < (Date.today - (365 * 2))
+        true
+      else
+        false
+      end
+    else
+      'put a valid date'
+    end
+  end
+
+  private
+  def validate_last_played_at(date)
+    if !date.nil?
+      @last_played_at = Date.parse(date)
+      p @last_played_at
+    else
+      false
+    end
+  end
+end
+
+new_game = Game.new("test5",'gender5','author5','source5','label5','2010-1-5', '2020-11-20')
+
+p new_game.can_be_archived?
