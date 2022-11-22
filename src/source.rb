@@ -1,3 +1,4 @@
+# Class that store the information about the origin of the Item
 class Source
   def initialize(name)
     @id = "src-#{rand(1_000_000)}"
@@ -10,6 +11,6 @@ class Source
   end
 end
 
-new_test = Source.new("test7")
+new_test = Source.new('test7')
 
 p new_test

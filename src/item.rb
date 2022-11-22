@@ -1,13 +1,12 @@
-# frozen_string_literal: true
-
 require 'date'
 # Main class for the project, parent of all other classes
 class Item
-  attr_reader :published_date, :id
-  @@id_counter = 0
-  def initialize(_name, gender, author, source, label, published_date)
-    @id = @@id_counter
-    @@id_counter += 1
+  attr_reader :published_date
+  attr_accessor :id
+
+  def initialize(name, gender, author, source, label, published_date)
+    @id = rand(1..1_000_000)
+    @name = name
     @gender = gender
     @author = author
     @source = source
@@ -24,13 +23,12 @@ class Item
     return unless can_be_archived?
 
     @archived = true
-    p @archived
   end
 end
 
-# test1 = Item.new('test', 'gender', 'author', 'source', 'label', '2001-1-1')
+test1 = Item.new('test', 'gender', 'author', 'source', 'label', '2001-1-1')
 
-# p test1.id
-# p test1.published_date.year
-# p test1.can_be_archived?
-# p test1.move_to_archive
+p test1.id
+p test1.published_date.year
+p test1.can_be_archived?
+p test1.move_to_archive

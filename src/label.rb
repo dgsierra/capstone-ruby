@@ -1,5 +1,6 @@
+# Class that store the caracteristics of the Item
 class Label
-  def initialize(title,color)
+  def initialize(title, color)
     @id = "src-#{rand(1_000_000)}"
     @title = title
     @color = color

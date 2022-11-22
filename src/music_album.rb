@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'item'
 
 #  Child class of Item
@@ -10,11 +8,7 @@ class MusicAlbum < Item
   end
 
   def can_be_archived?
-    if super && (@on_spotify == true)
-      true
-    else
-      false
-    end
+    super && (@on_spotify == true)
   end
 end
 

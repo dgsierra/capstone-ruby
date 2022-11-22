@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'item'
 # Child class of item class - Game this help to create object Game
 class Game < Item
@@ -13,11 +11,7 @@ class Game < Item
 
   def can_be_archived?
     if validate_last_played_at(@last_played_at)
-      if super && (last_played_at < (Date.today - (365 * 2)))
-        true
-      else
-        false
-      end
+      super && (last_played_at < (Date.today - (365 * 2)))
     else
       'put a valid date'
     end
@@ -26,11 +20,11 @@ class Game < Item
   private
 
   def validate_last_played_at(date)
-    if !date.nil?
+    if date.nil?
+      false
+    else
       @last_played_at = Date.parse(date)
       p @last_played_at
-    else
-      false
     end
   end
 end
