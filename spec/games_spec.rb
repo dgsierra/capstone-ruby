@@ -1,30 +1,10 @@
-require 'game'
+require_relative '../src/game'
 
 describe Game do
-  context 'testing the game' do
-    before :each do
-      @game = Game.new(false, '2008-01-01', '2005-01-01')
-    end
-
-    it 'Should be a instance of Game' do
-      expect(@game).to be_a(Game)
-    end
-
-    it 'Check if it is multiplayer' do
-      expect(@game.multiplayer).to be(false)
-    end
-
-    it 'Check the last played date' do
-      expect(@game.last_played_at).to eq('2008-01-01')
-    end
-
-    it 'should have attributes' do
-      expect(@game).to have_attributes(multiplayer: false, last_played_at: '2008-01-01')
-    end
-
-    it 'should set a value of true to multiplayer' do
-      @game.multiplayer = true
-      expect(@game.multiplayer).to be(true)
+  context 'should have a method can_be_archived?' do
+    it 'should return true wheater the game was last played more than 2 years ago' do
+      game = Game.new('Pikachu', 'male', 'Tom Holland', 'Liberland', 'label5', '2010-1-5', '2018-11-20')
+      expect(game.can_be_archived?).to eq(true)
     end
   end
 end
