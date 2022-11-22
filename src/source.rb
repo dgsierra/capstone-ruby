@@ -1,0 +1,15 @@
+class Source
+  def initialize(name)
+    @id = "src-#{rand(1_000_000)}"
+    @name = name
+    @items = []
+  end
+
+  def add_item(item)
+    @items.push(item)
+  end
+end
+
+new_test = Source.new("test7")
+
+p new_test

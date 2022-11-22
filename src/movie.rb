@@ -1,12 +1,15 @@
-require_relative 'item'
+# frozen_string_literal: true
 
+require_relative 'item'
+# Child of class Item
 class Movie < Item
   def initialize(name, gender, author, source, label, published_date, silent = nil)
     super(name, gender, author, source, label, published_date)
     @silent = silent
   end
-  def can_be_archived?()
-    if super or @silent == true
+
+  def can_be_archived?
+    if super || (@silent == true)
       true
     else
       false

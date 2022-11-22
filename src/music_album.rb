@@ -1,12 +1,16 @@
+# frozen_string_literal: true
+
 require_relative 'item'
 
+#  Child class of Item
 class MusicAlbum < Item
   def initialize(name, gender, author, source, label, published_date, on_spotify = nil)
     super(name, gender, author, source, label, published_date)
     @on_spotify = on_spotify
   end
-  def can_be_archived?()
-    if super and @on_spotify == true
+
+  def can_be_archived?
+    if super && (@on_spotify == true)
       true
     else
       false
