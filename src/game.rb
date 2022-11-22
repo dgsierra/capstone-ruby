@@ -12,8 +12,6 @@ class Game < Item
   def can_be_archived?
     if validate_last_played_at(@last_played_at)
       super && (last_played_at < (Date.today - (365 * 2)))
-    else
-      nil
     end
   end
 
