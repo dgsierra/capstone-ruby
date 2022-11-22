@@ -1,8 +1,8 @@
 require_relative 'item'
 
 class MusicAlbum < Item
-  def initialize(name, gender, author, source, label, publis_date, on_spotify = nil)
-    super(name, gender, author, source, label, publis_date)
+  def initialize(name, gender, author, source, label, published_date, on_spotify = nil)
+    super(name, gender, author, source, label, published_date)
     @on_spotify = on_spotify
   end
   def can_be_archived?()

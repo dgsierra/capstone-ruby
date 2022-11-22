@@ -1,8 +1,8 @@
 require_relative 'item'
 
 class Book < Item
-  def initialize(name, gender, author, source, label, publis_date, cover_state = nil)
-    super(name, gender, author, source, label, publis_date)
+  def initialize(name, gender, author, source, label, published_date, cover_state = nil)
+    super(name, gender, author, source, label, published_date)
     @cover_state = cover_state
   end
   def can_be_archived?()
