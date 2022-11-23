@@ -1,5 +1,5 @@
 require 'json'
-require '../music_album'
+require_relative '../music_album'
 
 module MusicAlbumsData
   def load_music_albums

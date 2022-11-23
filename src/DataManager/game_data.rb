@@ -1,5 +1,5 @@
-require '../../json'
-require '../game'
+require 'json'
+require_relative '../game'
 
 module GamesData
   def load_games

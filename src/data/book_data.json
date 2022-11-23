@@ -1,4 +1,11 @@
 [
-  {"publisher":"amazon","cover_state":"good","publish_date":"1999-02-02","title":"animals","color":"red"},
-  {"publisher":"some","cover_state":"bad","publish_date":"2020-02-02","title":"nothing","color":"nocolor"}
+	{
+		"name": "The Tyrant",
+		"gender": "Historic",
+		"author": "Manfredi",
+		"source": "Rome",
+		"label": "Historical Novels",
+		"published_date": "2022-11-11",
+		"cover_state": "good"
+	}
 ]

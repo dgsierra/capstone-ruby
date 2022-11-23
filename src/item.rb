@@ -2,7 +2,7 @@ require 'date'
 # Main class for the project, parent of all other classes
 class Item
   attr_reader :published_date
-  attr_accessor :id
+  attr_accessor :id, :items
 
   def initialize(name, gender, author, source, label, published_date)
     @id = rand(1..1_000_000)
