@@ -1,0 +1,5 @@
+[
+    {"publish_date":"2002-01-01","on_spotify":true,"genre":"rock"},
+{"publish_date":"2010-03-03","on_spotify":false,"genre":"pop"},
+{"publish_date":"2022-01-01","on_spotify":false,"genre":"latin"}
+]
