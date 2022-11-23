@@ -32,7 +32,6 @@ class Book < Item
     print 'Cover State: '
     cover_state = gets.chomp
     Book.new(name, gender, author, source, label, published_date, cover_state)
-    # @items << bookObj
   end
 
   def self.list_all_books(books)

@@ -20,6 +20,7 @@ class App
   def run
     BookData.load_book_data(@books)
     GamesData.load_games(@games)
+    MusicAlbumsData.load_music_data(@music_albums)
     user_input = 0
     puts "####\nWelcome to the School Library Ruby App!\n####"
     while user_input != '7'
@@ -33,5 +34,6 @@ class App
     puts "Exiting, thanks for using this app!\n\n" if user_input == '7'
     BookData.save_book_data(@books)
     GamesData.save_games(@games)
+    MusicAlbumsData.save_music_data(@music_albums)
   end
 end
