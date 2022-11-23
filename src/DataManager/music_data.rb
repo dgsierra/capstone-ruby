@@ -15,3 +15,11 @@ module MusicAlbumsData
     data
   end
 
+  def save_music_albums
+    data = []
+    @music_albums.each do |album|
+      data << { publish_date: album.publish_date, on_spotify: album.on_spotify, genre: album.genre.name }
+    end
+    File.write('./data/music_albums.json', JSON.generate(data))
+  end
+end
