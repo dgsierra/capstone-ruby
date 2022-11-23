@@ -1,5 +1,5 @@
 require 'json'
-require './Classes/book'
+require '../book'
 
 module BookData
   def load_book_data
