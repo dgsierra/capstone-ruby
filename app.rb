@@ -27,16 +27,16 @@ class App
     MovieData.load_movie_data(@movies)
     InfoData.load_info_data(@books, @games, @movies, @music_albums)
     user_input = 0
-    puts "####\nWelcome to the School Library Ruby App!\n####"
+    puts "####\nWelcome to the Catalog App!\n####"
     while user_input != '13'
       puts "Choose a number from the options below:\n"
       app_options
       print 'Enter Option [number]: '
       user_input = gets.chomp
-      puts "\n\n"
+      puts "\n"
       check_selection(user_input)
     end
-    puts "Exiting, thanks for using this app!\n\n" if user_input == '9'
+    puts "Exiting, thanks for using this app!\n\n" if user_input == '13'
     BookData.save_book_data(@books)
     GamesData.save_games(@games)
     MusicAlbumsData.save_music_data(@music_albums)

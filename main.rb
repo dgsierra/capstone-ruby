@@ -9,6 +9,11 @@ def app_options
   puts '6 - Create a game'
   puts '7 - Create a music album'
   puts '8 - Create a movie'
+  puts '9 - List all labels'
+  puts '10 - List all genres'
+  puts '11 - List all authors'
+  puts '12 - List all sources'
+  puts '13 - Exit'
   puts "\n"
 end
 
