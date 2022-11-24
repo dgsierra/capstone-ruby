@@ -5,7 +5,8 @@ class MovieData
 
     object = JSON.parse(File.read('./src/data/movies.json'))
     object.each do |movie|
-      movie = Movie.new(movie['name'], movie['gender'], movie['author'], movie['source'], movie['label'], movie['published_date'], movie['silent'])
+      movie = Movie.new(movie['name'], movie['gender'], movie['author'], movie['source'], movie['label'],
+                        movie['published_date'], movie['silent'])
       movies << movie
     end
   end

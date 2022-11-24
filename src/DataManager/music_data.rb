@@ -6,7 +6,8 @@ class MusicAlbumsData
 
     object = JSON.parse(File.read('./src/data/music_albums.json'))
     object.each do |album|
-      album = MusicAlbum.new(album['name'], album['gender'], album['author'], album['source'], album['label'], album['published_date'], album['on_spotify'])
+      album = MusicAlbum.new(album['name'], album['gender'], album['author'], album['source'], album['label'],
+                             album['published_date'], album['on_spotify'])
       albums << album
     end
   end

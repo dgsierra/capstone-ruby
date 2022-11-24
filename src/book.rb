@@ -3,6 +3,7 @@ require_relative 'item'
 # Child class of item
 class Book < Item
   attr_accessor :name, :gender, :author, :source, :label, :cover_state
+
   def initialize(name, gender, author, source, label, published_date, cover_state = nil)
     super(name, gender, author, source, label, published_date)
     @cover_state = cover_state

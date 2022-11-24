@@ -6,7 +6,8 @@ class BookData
 
     object = JSON.parse(File.read('./src/data/book_data.json'))
     object.each do |book|
-      book = Book.new(book['name'], book['gender'], book['author'], book['source'], book['label'], book['published_date'], book['cover_state'])
+      book = Book.new(book['name'], book['gender'], book['author'], book['source'], book['label'],
+                      book['published_date'], book['cover_state'])
       books << book
     end
   end

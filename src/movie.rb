@@ -2,6 +2,7 @@ require_relative 'item'
 # Child of class Item
 class Movie < Item
   attr_accessor :name, :gender, :author, :source, :label, :published_date, :silent
+
   def initialize(name, gender, author, source, label, published_date, silent = nil)
     super(name, gender, author, source, label, published_date)
     @silent = silent

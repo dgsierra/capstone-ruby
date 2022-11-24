@@ -6,7 +6,8 @@ class GamesData
 
     object = JSON.parse(File.read('./src/data/games.json'))
     object.each do |game|
-      game = Game.new(game['name'], game['gender'], game['author'], game['source'], game['label'], game['published_date'], game['last_played_at'])
+      game = Game.new(game['name'], game['gender'], game['author'], game['source'], game['label'],
+                      game['published_date'], game['last_played_at'])
       games << game
     end
   end
