@@ -1,0 +1,22 @@
+[
+	{
+		"name": "The Wall",
+		"gender": "Rock",
+		"author": "Pink Floyd",
+		"source": "EMF",
+		"label": "prog-rock records",
+		"published_date": "1976-11-11",
+		"on_spotify": "Yes",
+		"type": "music"
+	},
+	{
+		"name": "La Bamba",
+		"gender": "Tropical",
+		"author": "Marron",
+		"source": "gift",
+		"label": "mine",
+		"published_date": "1989-01-01",
+		"on_spotify": "yes",
+		"type": "music"
+	}
+]
