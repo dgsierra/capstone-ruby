@@ -2,11 +2,13 @@ require_relative 'item'
 # Child class of item class - Game this help to create object Game
 class Game < Item
   attr_accessor :name, :gender, :author, :source, :label, :published_date, :last_played_at
+  attr_reader :type
 
   def initialize(name, gender, author, source, label, published_date, last_played_at = nil)
     super(name, gender, author, source, label, published_date)
     @last_played_at = last_played_at
     @multiplayer = false
+    @type = 'game'
   end
 
   def can_be_archived?

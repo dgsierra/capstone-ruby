@@ -22,7 +22,8 @@ class GamesData
         source: game.source,
         label: game.label,
         published_date: game.published_date,
-        last_played_at: game.last_played_at
+        last_played_at: game.last_played_at,
+        type: game.type
       }
       data << game
     end

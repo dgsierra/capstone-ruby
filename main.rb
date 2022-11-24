@@ -19,6 +19,7 @@ end
 
 # rubocop:disable Metrics/CyclomaticComplexity
 def check_selection(response)
+  get_data = InfoData.load_info_data(@books, @games, @movies, @music_albums)
   case response
   when '1'
     Book.list_all_books(@books)
@@ -28,6 +29,7 @@ def check_selection(response)
     MusicAlbum.list_music_albums(@music_albums)
   when '4'
     Movie.list_movies(@movies)
+    puts
   when '5'
     book = Book.create_book
     @books << book
@@ -45,13 +47,25 @@ def check_selection(response)
     @movies << movie
     puts "Movie '#{movie.name}' of gender #{movie.gender} created successfully" if @movies.include?(movie)
   when '9'
-    p(InfoData.load_info_data(@books, @games, @movies, @music_albums)).collect { |item| item['label'] }
+    get_data.each_with_index do |item, index|
+      p "# #{index + 1} label: #{item['label']} type: #{item['type'].capitalize}"
+    end
+    puts
   when '10'
-    p(InfoData.load_info_data(@books, @games, @movies, @music_albums)).collect { |item| item['gender'] }
+    get_data.each_with_index do |item, index|
+      p "# #{index + 1} Gender: #{item['gender']}"
+    end
+    puts
   when '11'
-    p(InfoData.load_info_data(@books, @games, @movies, @music_albums)).collect { |item| item['author'] }
+    get_data.each_with_index do |item, index|
+      p "# #{index + 1} Author: #{item['author']}"
+    end
+    puts
   when '12'
-    p(InfoData.load_info_data(@books, @games, @movies, @music_albums)).collect { |item| item['source'] }
+    get_data.each_with_index do |item, index|
+      p "# #{index + 1} Source: #{item['source']}"
+    end
+    puts
   end
 end
 # rubocop:enable Metrics/CyclomaticComplexity

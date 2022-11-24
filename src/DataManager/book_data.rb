@@ -22,7 +22,8 @@ class BookData
         source: book.source,
         label: book.label,
         published_date: book.published_date,
-        cover_state: book.cover_state
+        cover_state: book.cover_state,
+        type: book.type
       }
       data << book
     end

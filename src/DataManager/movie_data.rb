@@ -21,7 +21,8 @@ class MovieData
         source: movie.source,
         label: movie.label,
         published_date: movie.published_date,
-        silent: movie.silent
+        silent: movie.silent,
+        type: movie.type
       }
       data << movie
     end

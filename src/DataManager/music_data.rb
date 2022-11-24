@@ -22,7 +22,8 @@ class MusicAlbumsData
         source: album.source,
         label: album.label,
         published_date: album.published_date,
-        on_spotify: album.on_spotify
+        on_spotify: album.on_spotify,
+        type: album.type
       }
       data << album
     end
