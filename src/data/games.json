@@ -1,9 +1,12 @@
 [
-    {"multiplayer":false,"last_played_at":"2020-09-09","author":"Stephen","publish_date":"2000-09-09","name":"Temple"},
-{"multiplayer":true,"last_played_at":"2009-09-09","author":"Frog king","publish_date":"2009-09-09","name":"Frogs"},
-{"multiplayer":true,"last_played_at":"2022-01-01","author":"Miner Man","publish_date":"1990-09-01","name":"Mine craft"},
-{"multiplayer":true,"last_played_at":"2006-06-03","author":"Barbra","publish_date":"2009-08-09","name":"Barbie"},
-{"multiplayer":true,"last_played_at":"2007-08-09","author":"Mario","publish_date":"2005-03-08","name":"Super mario"},
-{"multiplayer":false,"last_played_at":"2056-10-12","author":"Robert","publish_date":"2056-09-09","name":"Robot"},
-{"multiplayer":true,"last_played_at":"2019-09-09","author":"Ritah","publish_date":"2002-05-09","name":"Riverside"}
+	{
+		"name": "The Witcher",
+		"gender": "Fantasy",
+		"author": "Polish guy",
+		"source": "Poland",
+		"label": "Action fantasy gs",
+		"published_date": "2014-11-11",
+		"last_played_at": "11/11/2022",
+		"type": "game"
+	}
 ]

@@ -1,25 +1,32 @@
 require 'json'
-require '../music_album'
 
-module MusicAlbumsData
-  def load_music_albums
-    data = []
-    file = './data/music_albums.json'
-    if File.exist?(file) && File.read(file) != ''
-      JSON.parse(File.read(file)).each do |album|
-        new_album = MusicAlbum.new(album['publish_date'], album['on_spotify'])
-        new_album.add_genre(Genre.new(album['genre']))
-        data << new_album
-      end
+class MusicAlbumsData
+  def self.load_music_data(albums)
+    return albums unless File.exist?('./src/data/music_albums.json')
+
+    object = JSON.parse(File.read('./src/data/music_albums.json'))
+    object.each do |album|
+      album = MusicAlbum.new(album['name'], album['gender'], album['author'], album['source'], album['label'],
+                             album['published_date'], album['on_spotify'])
+      albums << album
     end
-    data
   end
 
-  def save_music_albums
+  def self.save_music_data(albums)
     data = []
-    @music_albums.each do |album|
-      data << { publish_date: album.publish_date, on_spotify: album.on_spotify, genre: album.genre.name }
+    albums.each do |album|
+      album = {
+        name: album.name,
+        gender: album.gender,
+        author: album.author,
+        source: album.source,
+        label: album.label,
+        published_date: album.published_date,
+        on_spotify: album.on_spotify,
+        type: album.type
+      }
+      data << album
     end
-    File.write('./data/music_albums.json', JSON.generate(data))
+    File.write('./src/data/music_albums.json', JSON.pretty_generate(data, { indent: "\t", object_nl: "\n" }))
   end
 end
