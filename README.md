@@ -25,6 +25,10 @@ In this project we worked with classes, hashmaps arrays and the terminal.
 - Open the terminal
 - Run `bundle install`
 
+## Demo
+
+[Video](https://drive.google.com/file/d/1RVTPA8cKtzqiPOR3uxHtgFsFMzq1mzgk/view?usp=share_link)
+
 ## Authors
 
 👤 **Daniel**
