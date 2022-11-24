@@ -40,13 +40,13 @@ def check_selection(response)
     @movies << movie
     puts "Movie '#{movie.name}' of gender #{movie.gender} created successfully" if @movies.include?(movie)
   when '9'
-    p InfoData.load_info_data(@books, @games, @movies, @music_albums).collect { |item| item['label'] }
+    p(InfoData.load_info_data(@books, @games, @movies, @music_albums)).collect { |item| item['label'] }
   when '10'
-    p InfoData.load_info_data(@books, @games, @movies, @music_albums).collect { |item| item['gender'] }
+    p(InfoData.load_info_data(@books, @games, @movies, @music_albums)).collect { |item| item['gender'] }
   when '11'
-    p InfoData.load_info_data(@books, @games, @movies, @music_albums).collect { |item| item['author'] }
+    p(InfoData.load_info_data(@books, @games, @movies, @music_albums)).collect { |item| item['author'] }
   when '12'
-    p InfoData.load_info_data(@books, @games, @movies, @music_albums).collect { |item| item['source'] }
+    p(InfoData.load_info_data(@books, @games, @movies, @music_albums)).collect { |item| item['source'] }
   end
 end
 # rubocop:enable Metrics/CyclomaticComplexity
