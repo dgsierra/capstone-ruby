@@ -9,6 +9,7 @@ require_relative './src/DataManager/book_data'
 require_relative './src/DataManager/game_data'
 require_relative './src/DataManager/music_data'
 require_relative './src/DataManager/movie_data'
+require_relative './src/DataManager/info_data'
 require 'json'
 
 class App
@@ -24,9 +25,10 @@ class App
     GamesData.load_games(@games)
     MusicAlbumsData.load_music_data(@music_albums)
     MovieData.load_movie_data(@movies)
+    InfoData.load_info_data(@books, @games, @movies, @music_albums)
     user_input = 0
     puts "####\nWelcome to the School Library Ruby App!\n####"
-    while user_input != '9'
+    while user_input != '13'
       puts "Choose a number from the options below:\n"
       app_options
       print 'Enter Option [number]: '
